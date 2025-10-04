@@ -1,0 +1,145 @@
+/* Styles specific to compare.html */
+
+/* Base Styles */
+body {
+	font-family: 'Segoe UI', Arial, sans-serif;
+	margin: 0;
+	background: #f8f9fa;
+	color: #222;
+	padding: 0;
+	overflow-x: hidden;
+}
+main {
+	max-width: 1200px;
+	margin: 2rem auto;
+	padding: 0 1rem;
+}
+footer {
+	background: #222;
+	color: #fff;
+	text-align: center;
+	padding: 1rem 0;
+	margin-top: 3rem;
+}
+
+/* Navbar Styles */
+header {
+	background: #000;
+	color: #fff;
+	padding: 0.5rem 0;
+}
+.navbar-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1.5rem;
+	height: 64px;
+	background: #000;
+}
+.navbar-left {
+	flex: 1;
+	display: flex;
+	align-items: center;
+}
+.logo-area {
+	display: flex;
+	align-items: center;
+	gap: 0.7rem;
+}
+.navbar-center {
+	flex: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.navbar-center nav {
+	display: flex;
+	align-items: center;
+	gap: 1.2rem;
+}
+.navbar-right {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 0.5rem;
+}
+.icon-btn {
+	background: #fff;
+	border: none;
+	border-radius: 50%;
+	width: 38px;
+	height: 38px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin-left: 0.2rem;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+	padding: 0;
+}
+.icon-btn:hover {
+	background: #e9ecef;
+}
+.logo-image {
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	object-fit: cover;
+	background: #fff;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.brand-name {
+	font-size: 1.6rem;
+	font-weight: 700;
+	color: #fff;
+	letter-spacing: 1px;
+}
+header nav {
+	display: flex;
+	align-items: center;
+	gap: 1.2rem;
+}
+header nav a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 1.08rem;
+	padding: 0.3rem 0.7rem;
+	border-radius: 4px;
+	transition: background 0.2s;
+}
+header nav a:hover {
+	background: #007b5e;
+	text-decoration: none;
+}
+
+/* Comparison Section Styles */
+.comparison-section {
+	margin: 3rem 0;
+}
+.comparison-table {
+	width: 100%;
+	border-collapse: collapse;
+	background: #fff;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.comparison-table th, .comparison-table td {
+	border: 1px solid #e0e0e0;
+	padding: 0.75rem 1rem;
+	text-align: center;
+}
+.comparison-table th {
+	background: #007b5e;
+	color: #fff;
+}
+@media (max-width: 600px) {
+	.comparison-table th, .comparison-table td {
+		padding: 0.5rem;
+	}
+}
