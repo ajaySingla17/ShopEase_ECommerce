@@ -1,162 +1,64 @@
-/* Styles specific to inquiry.html */
+/* Modern contact/inquiry page styles (image-free) */
 
-/* Base Styles */
-body {
-	font-family: 'Segoe UI', Arial, sans-serif;
-	margin: 0;
-	background: #f8f9fa;
-	color: #222;
-	padding: 0;
-	overflow-x: hidden;
-}
-main {
-	max-width: 1200px;
-	margin: 2rem auto;
-	padding: 0 1rem;
-}
-footer {
-	background: #222;
-	color: #fff;
-	text-align: center;
-	padding: 1rem 0;
-	margin-top: 3rem;
+:root{
+    --primary-color: #1a73e8;
+    --secondary-color: #34a853;
+    --bg: #f7f8fb;
+    --card-bg: #ffffff;
+    --muted: #6b7280;
+    --shadow: 0 8px 30px rgba(16,24,40,0.08);
 }
 
-/* Navbar Styles */
-header {
-	background: #000;
-	color: #fff;
-	padding: 0.5rem 0;
-}
-.navbar-container {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 1.5rem;
-	height: 64px;
-	background: #000;
-}
-.navbar-left {
-	flex: 1;
-	display: flex;
-	align-items: center;
-}
-.logo-area {
-	display: flex;
-	align-items: center;
-	gap: 0.7rem;
-}
-.navbar-center {
-	flex: 2;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.navbar-center nav {
-	display: flex;
-	align-items: center;
-	gap: 1.2rem;
-}
-.navbar-right {
-	flex: 1;
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	gap: 0.5rem;
-}
-.icon-btn {
-	background: #fff;
-	border: none;
-	border-radius: 50%;
-	width: 38px;
-	height: 38px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	cursor: pointer;
-	transition: background 0.2s;
-	margin-left: 0.2rem;
-	box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-	padding: 0;
-}
-.icon-btn:hover {
-	background: #e9ecef;
-}
-.logo-image {
-	width: 38px;
-	height: 38px;
-	border-radius: 50%;
-	object-fit: cover;
-	background: #fff;
-	box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-}
-.brand-name {
-	font-size: 1.6rem;
-	font-weight: 700;
-	color: #fff;
-	letter-spacing: 1px;
-}
-header nav {
-	display: flex;
-	align-items: center;
-	gap: 1.2rem;
-}
-header nav a {
-	color: #fff;
-	text-decoration: none;
-	font-weight: 500;
-	font-size: 1.08rem;
-	padding: 0.3rem 0.7rem;
-	border-radius: 4px;
-	transition: background 0.2s;
-}
-header nav a:hover {
-	background: #007b5e;
-	text-decoration: none;
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial; background:var(--bg); color:#111827}
+
+/* Keep header layout consistent with index.css — only small overrides here */
+.navbar-container{max-width:1400px;
+    margin:0 auto;
+    padding:0 1.5rem;
+    display:flex;
+    align-items:center;
+    justify-content:space-between}
+
+.inquiry-page-container{padding-top:4.5rem;min-height:calc(100vh - 4.5rem);display:flex;align-items:center;justify-content:center}
+
+.inquiry-hero{width:100%;display:flex;align-items:center;justify-content:center;padding:3rem 1rem}
+
+.contact-card{background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(250,250,250,0.95));width:100%;max-width:1100px;border-radius:14px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+
+.contact-left{padding:48px 40px;background:linear-gradient(135deg, rgba(26,115,232,0.04), rgba(52,168,83,0.02));display:flex;flex-direction:column;gap:20px}
+.contact-left h1{font-size:1.75rem;color:var(--primary-color)}
+.contact-left .lead{color:var(--muted);line-height:1.5}
+.contact-details{margin-top:8px;display:flex;flex-direction:column;gap:12px}
+.detail-row{display:flex;gap:12px;align-items:center}
+.detail-row i{background:rgba(255,255,255,0.8);padding:12px;border-radius:8px;color:var(--primary-color);font-size:18px;min-width:44px;text-align:center;box-shadow:0 4px 12px rgba(26,115,232,0.06)}
+.detail-row h4{margin:0;font-size:0.95rem}
+.detail-row a{color:#0f172a;font-weight:600;text-decoration:none}
+.small-muted{color:var(--muted);font-size:0.9rem}
+
+.contact-right{padding:40px;display:flex;align-items:center;justify-content:center}
+.inquiry-form{width:100%;max-width:420px;display:flex;flex-direction:column;gap:14px}
+.inquiry-form label{font-size:0.85rem;color:var(--muted);margin-bottom:6px}
+.inquiry-form input,.inquiry-form textarea{width:100%;padding:12px 14px;border:1px solid #e6e9ee;border-radius:10px;background:var(--card-bg);font-size:0.95rem;resize:vertical}
+.inquiry-form textarea{min-height:140px}
+.form-actions{display:flex;gap:12px;align-items:center}
+.banner-btn{background:var(--secondary-color);color:#fff;padding:10px 18px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
+.btn-ghost{background:transparent;border:1px solid rgba(15,23,42,0.06);padding:10px 18px;border-radius:10px;cursor:pointer}
+
+/* Responsive: stack columns on small screens */
+@media (max-width:900px){
+    .contact-card{grid-template-columns:1fr}
+    .contact-left{padding:28px}
+    .contact-right{padding:28px}
 }
 
-/* Inquiry Section Styles */
-.inquiry-section {
-	margin: 3rem 0;
+@media (max-width:480px){
+    .inquiry-hero{padding:2rem 0.75rem}
+    .contact-left h1{font-size:1.4rem}
 }
-.inquiry-form {
-	background: #fff;
-	border-radius: 8px;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-	padding: 2rem;
-	max-width: 500px;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
-}
-.inquiry-form label {
-	font-weight: 500;
-}
-.inquiry-form input,
-.inquiry-form textarea {
-	padding: 0.5rem;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	font-size: 1rem;
-}
-.inquiry-form button {
-	background: #007b5e;
-	color: #fff;
-	border: none;
-	border-radius: 4px;
-	padding: 0.75rem;
-	font-size: 1rem;
-	cursor: pointer;
-	transition: background 0.2s;
-}
-.inquiry-form button:hover {
-	background: #005a43;
-}
-@media (max-width: 600px) {
-	.inquiry-form {
-		padding: 1rem;
-	}
-}
+
+/* Focus styles for accessibility */
+.inquiry-form input:focus,.inquiry-form textarea:focus{outline:3px solid rgba(26,115,232,0.12);outline-offset:2px;border-color:rgba(26,115,232,0.32)}
+
+/* Small utilities */
+.active-nav{color:var(--primary-color);border-bottom:2px solid var(--primary-color)}

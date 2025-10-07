@@ -1,298 +1,626 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShopEase Products</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="index.css">
+
+  <title>ShopEase Products</title>
 </head>
+
 <body>
-    <header>
-        <div class="navbar-container">
-            <div class="navbar-left">
-                <div class="logo-area">
-                    <img src="logo.png" alt="ShopEase Logo" class="logo-image">
-                    <span class="brand-name">ShopEase</span>
-                </div>
-            </div>
-            <div class="navbar-center">
-                <nav>
-                    <a href="index.html">Shop</a>
-                    <a href="compare.html">Compare</a>
-                    <a href="cart.html">Cart</a>
-                    <a href="inquiry.html">Inquiry</a>
-                </nav>
-            </div>
-            <div class="navbar-right">
-                <button class="icon-btn" title="Search">
-                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="7" stroke="#007b5e" stroke-width="2"/>
-                        <line x1="15.4142" y1="15" x2="20" y2="19.5858" stroke="#007b5e" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </button>
-                <button class="icon-btn" title="Login">
-                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="11" cy="8" r="4" stroke="#007b5e" stroke-width="2"/>
-                        <path d="M3 19c0-3.5 3.5-6 8-6s8 2.5 8 6" stroke="#007b5e" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </button>
-            </div>
+  <header>
+    <nav class="navbar-container">
+
+
+      <nav class="left_navbar">
+        <nav class="logo_area">
+          <img src="logo.png" alt="LOGO_IMAGE">
+          <span class="brand_name">ShopEase</span>
+        </nav>
+      </nav>
+
+
+
+
+
+      <div class="center_navbar">
+
+        <nav class="button_area">
+          <a href="index.html"> <i class="fa-solid fa-shirt"></i> Shop</a>
+          <a href="comparision.html"> <i class="fa-solid fa-exchange-alt"></i> Compare</a>
+          <a href="cart.html"> <i class="fa-solid fa-shopping-cart"></i> Cart</a>
+          <a href="inquiry.html"> <i class="fa-solid fa-question-circle"></i> Inquiry</a>
+        </nav>
+      </div>
+
+
+
+      <nav class="right_navbar">
+        <button class="icon-btn" title="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <div class="InputContainer">
+          <input placeholder="Search.." id="input" class="input" name="text" type="text">
+
         </div>
-    </header>
-    <div class="banner-space">
-        <img src="banner.jpg" alt="ShopEase Banner" style="width: 100%; height: auto;">  
-            <div class="banner-content" id="banner">
-                <div class="banner-text">
-                    <h2>Welcome to ShopEase</h2>
-                    <p>Discover the latest in fashion: T-Shirts, Shoes, Jackets, and Denim!</p>
-                    <button class="banner-btn" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'});">Shop Now</button>
-                </div>
-            </div>
+
+        <button class="icon_btn" title="Login">
+          <i class="fa-regular fa-user"></i>
+        </button>
+      </nav>
+    </nav>
+  </header>
+  <div class="banner-space">
+    <div class="banner-slideshow" aria-hidden="false">
+      <img class="banner-slide" src="banner-1.webp" alt="ShopEase Banner 1">
+      <img class="banner-slide" src="banner-2.webp" alt="ShopEase Banner 2">
+      <img class="banner-slide" src="banner-3.webp" alt="ShopEase Banner 3">
     </div>
-    <main>
-        <section id="products" class="product-listing">
-            <h2>Products</h2>
-            <h3 class="category-heading">T-Shirts</h3>
-            <div class="products-grid">
-                <div class="product-card" data-category="tshirts">
-                    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Classic White T-Shirt">
-                    <h3>Classic White T-Shirt</h3>
-                    <p>$19.99</p>
-                    <button class="view-details" data-product="1">View Details</button>
-                    <button class="add-cart">Add to Cart</button>
-                    <input type="checkbox" class="compare-checkbox" data-product="1"> Compare
-                </div>
-                <div class="product-card" data-category="tshirts">
-                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="Graphic T-Shirt">
-                    <h3>Graphic T-Shirt</h3>
-                    <p>$24.99</p>
-                    <button class="view-details" data-product="2">View Details</button>
-                    <button class="add-cart">Add to Cart</button>
-                    <input type="checkbox" class="compare-checkbox" data-product="2"> Compare
-                </div>
-                <div class="product-card" data-category="tshirts">
-                    <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80" alt="Striped T-Shirt">
-                    <h3>Striped T-Shirt</h3>
-                    <p>$22.99</p>
-                    <button class="view-details" data-product="3">View Details</button>
-                    <button class="add-cart">Add to Cart</button>
-                    <input type="checkbox" class="compare-checkbox" data-product="3"> Compare
-                </div>
-                <div class="product-card" data-category="tshirts">
-                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="V-Neck T-Shirt">
-                    <h3>V-Neck T-Shirt</h3>
-                    <p>$21.99</p>
-                    <button class="view-details" data-product="4">View Details</button>
-                    <button class="add-cart">Add to Cart</button>
-                    <input type="checkbox" class="compare-checkbox" data-product="4"> Compare
-                </div>
-            </div>
-            <h3 class="category-heading">Shoes</h3>
-            <div class="products-grid">
-                <div class="product-card" data-category="shoes">
-                    <img src="https://images.unsplash.com/photo-1528701800484-905d3b6e8a08?auto=format&fit=crop&w=400&q=80" alt="Running Shoes">
-                    <h3>Running Shoes</h3>
-                    <p>$49.99</p>
-                    <button class="view-details" data-product="5">View Details</button>
-                    <button class="add-cart">Add to Cart</button>
-                    <input type="checkbox" class="compare-checkbox" data-product="5"> Compare
-                </div>
-                <div class="product-card" data-category="shoes">
-                    <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="Casual Sneakers">
-                    <h3>Casual Sneakers</h3>
-                    <p>$39.99</p>
-                    <button class="view-details" data-product="6">View Details</button>
-                    <button class="add-cart">Add to Cart</button>
-                    <input type="checkbox" class="compare-checkbox" data-product="6"> Compare
-                </div>
-                <div class="product-card" data-category="shoes">
-                    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="High-top Sneakers">
-                    <h3>High-top Sneakers</h3>
-                    <p>$54.99</p>
-                    <button class="view-details" data-product="7">View Details</button>
-                    <button class="add-cart">Add to Cart</button>
-                    <input type="checkbox" class="compare-checkbox" data-product="7"> Compare
-                </div>
-                <div class="product-card" data-category="shoes">
-                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Leather Loafers">
-                    <h3>Leather Loafers</h3>
-                    <p>$59.99</p>
-                    <button class="view-details" data-product="8">View Details</button>
-                    <button class="add-cart">Add to Cart</button>
-                    <input type="checkbox" class="compare-checkbox" data-product="8"> Compare
-                </div>
-            </div>
-            <h3 class="category-heading">Jackets</h3>
-            <div class="products-grid">
-                <div class="product-card" data-category="jackets">
-                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Denim Jacket">
-                    <h3>Denim Jacket</h3>
-                    <p>$59.99</p>
-                    <button class="view-details" data-product="9">View Details</button>
-                    <button class="add-cart">Add to Cart</button>
-                    <input type="checkbox" class="compare-checkbox" data-product="9"> Compare
-                </div>
-                <div class="product-card" data-category="jackets">
-                    <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80" alt="Leather Jacket">
-                    <h3>Leather Jacket</h3>
-                    <p>$89.99</p>
-                    <button class="view-details" data-product="10">View Details</button>
-                    <button class="add-cart">Add to Cart</button>
-                    <input type="checkbox" class="compare-checkbox" data-product="10"> Compare
-                </div>
-                <div class="product-card" data-category="jackets">
-                    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Bomber Jacket">
-                    <h3>Bomber Jacket</h3>
-                    <p>$69.99</p>
-                    <button class="view-details" data-product="11">View Details</button>
-                    <button class="add-cart">Add to Cart</button>
-                    <input type="checkbox" class="compare-checkbox" data-product="11"> Compare
-                </div>
-                <div class="product-card" data-category="jackets">
-                    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Windbreaker">
-                    <h3>Windbreaker</h3>
-                    <p>$49.99</p>
-                    <button class="view-details" data-product="12">View Details</button>
-                    <button class="add-cart">Add to Cart</button>
-                    <input type="checkbox" class="compare-checkbox" data-product="12"> Compare
-                </div>
-            </div>
-            <h3 class="category-heading">Denim</h3>
-            <div class="products-grid">
-                <div class="product-card" data-category="denim">
-                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Classic Denim Jeans">
-                    <h3>Classic Denim Jeans</h3>
-                    <p>$44.99</p>
-                    <button class="view-details" data-product="13">View Details</button>
-                    <button class="add-cart">Add to Cart</button>
-                    <input type="checkbox" class="compare-checkbox" data-product="13"> Compare
-                </div>
-                <div class="product-card" data-category="denim">
-                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Ripped Denim Jeans">
-                    <h3>Ripped Denim Jeans</h3>
-                    <p>$49.99</p>
-                    <button class="view-details" data-product="14">View Details</button>
-                    <button class="add-cart">Add to Cart</button>
-                    <input type="checkbox" class="compare-checkbox" data-product="14"> Compare
-                </div>
-                <div class="product-card" data-category="denim">
-                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="Denim Shorts">
-                    <h3>Denim Shorts</h3>
-                    <p>$29.99</p>
-                    <button class="view-details" data-product="15">View Details</button>
-                    <button class="add-cart">Add to Cart</button>
-                    <input type="checkbox" class="compare-checkbox" data-product="15"> Compare
-                </div>
-                <div class="product-card" data-category="denim">
-                    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Denim Skirt">
-                    <h3>Denim Skirt</h3>
-                    <p>$34.99</p>
-                    <button class="view-details" data-product="16">View Details</button>
-                    <button class="add-cart">Add to Cart</button>
-                    <input type="checkbox" class="compare-checkbox" data-product="16"> Compare
-                </div>
-            </div>
-        </section>
-        <!-- Product Details Modals (hidden by default) -->
-        <div id="modal-1" class="modal">
-            <div class="modal-content">
-                <span class="close" data-modal="1">&times;</span>
-                <h2>Classic White T-Shirt</h2>
-                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80" alt="Classic White T-Shirt">
-                <p>Soft, breathable cotton t-shirt perfect for everyday wear. Available in all sizes.</p>
-                <ul>
-                    <li>100% Cotton</li>
-                    <li>Machine Washable</li>
-                    <li>Unisex Fit</li>
-                </ul>
-            </div>
+    <div class="banner-content" id="banner">
+      <div class="banner-text">
+        <h2>Welcome to ShopEase</h2>
+        <p>Discover the latest in fashion: T-Shirts, Shoes, Jackets, and Denim!</p>
+        <button class="banner-btn"
+          onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'});">Shop Now</button>
+      </div>
+      <!-- Scrolling marquee text -->
+      <div class="banner-marquee" aria-hidden="false">
+        <div class="marquee" aria-hidden="true">
+          <span>Free shipping on orders over $50 — New arrivals: T-Shirts & Jackets — Up to 30% off select items</span>
+          <span>Free shipping on orders over $50 — New arrivals: T-Shirts & Jackets — Up to 30% off select items</span>
         </div>
-        <div id="modal-2" class="modal">
-            <div class="modal-content">
-                <span class="close" data-modal="2">&times;</span>
-                <h2>Running Shoes</h2>
-                <img src="https://images.unsplash.com/photo-1528701800484-905d3b6e8a08?auto=format&fit=crop&w=600&q=80" alt="Running Shoes">
-                <p>Lightweight and comfortable running shoes designed for performance and style.</p>
-                <ul>
-                    <li>Breathable Mesh</li>
-                    <li>Shock Absorbing Sole</li>
-                    <li>Available in Multiple Colors</li>
-                </ul>
+      </div>
+    </div>
+  </div>
+  <main>
+    <section id="products" class="product-listing">
+      <h2>Products</h2>
+
+
+      <section class="category">
+        <h3 id="tshirts-heading" class="category-heading">T-Shirts</h3>
+        <ul class="products-grid">
+          <li class="product-card" data-category="tshirts">
+            <a href="#product-1" class="product-link">
+              <figure>
+                <img src="/products/white_tshirt.webp" alt="Classic White T-Shirt">
+                <figcaption>
+                  <h4>Classic White T-Shirt</h4>
+                  <p>$19.99</p>
+                </figcaption>
+              </figure>
+            </a>
+            <div class="card-actions">
+              <button class="add-cart">Add to Cart</button>
+              <label>
+                <input type="checkbox" class="compare-checkbox" data-product="1"> Compare
+              </label>
             </div>
-        </div>
-        <div id="modal-3" class="modal">
-            <div class="modal-content">
-                <span class="close" data-modal="3">&times;</span>
-                <h2>Denim Jacket</h2>
-                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Denim Jacket">
-                <p>Classic blue denim jacket with a modern fit. Perfect for layering in any season.</p>
-                <ul>
-                    <li>Durable Denim</li>
-                    <li>Button Closure</li>
-                    <li>Two Front Pockets</li>
-                </ul>
+          </li>
+
+          <li class="product-card" data-category="tshirts">
+            <a href="#product-2" class="product-link">
+              <figure>
+                <img src="products/graphic.webp" alt="Graphic T-Shirt">
+                <figcaption>
+                  <h4>Graphic T-Shirt</h4>
+                  <p>$24.99</p>
+                </figcaption>
+              </figure>
+            </a>
+            <div class="card-actions">
+              <button class="add-cart">Add to Cart</button>
+              <label>
+                <input type="checkbox" class="compare-checkbox" data-product="2"> Compare
+              </label>
             </div>
-        </div>
-        <div id="modal-4" class="modal">
-            <div class="modal-content">
-                <span class="close" data-modal="4">&times;</span>
-                <h2>Graphic T-Shirt</h2>
-                <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" alt="Graphic T-Shirt">
-                <p>Trendy graphic t-shirt with unique print. Comfortable and stylish for any occasion.</p>
-                <ul>
-                    <li>Soft Fabric</li>
-                    <li>Machine Washable</li>
-                    <li>Modern Fit</li>
-                </ul>
+          </li>
+
+          <li class="product-card" data-category="tshirts">
+            <a href="#product-3" class="product-link">
+              <figure>
+                <img src="products/striped.jpeg" alt="Striped T-Shirt">
+                <figcaption>
+                  <h4>Striped T-Shirt</h4>
+                  <p>$22.99</p>
+                </figcaption>
+              </figure>
+            </a>
+            <div class="card-actions">
+              <button class="add-cart">Add to Cart</button>
+              <label>
+                <input type="checkbox" class="compare-checkbox" data-product="3"> Compare
+              </label>
             </div>
-        </div>
-        <div id="modal-5" class="modal">
-            <div class="modal-content">
-                <span class="close" data-modal="5">&times;</span>
-                <h2>Casual Sneakers</h2>
-                <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=600&q=80" alt="Casual Sneakers">
-                <p>Comfortable sneakers for everyday use. Lightweight and durable design.</p>
-                <ul>
-                    <li>Breathable Material</li>
-                    <li>Flexible Sole</li>
-                    <li>Available in Multiple Sizes</li>
-                </ul>
+          </li>
+
+          <li class="product-card" data-category="tshirts">
+            <a href="#product-4" class="product-link">
+              <figure>
+                <img src="products/vneck.jpeg" alt="V-Neck T-Shirt">
+                <figcaption>
+                  <h4>V-Neck T-Shirt</h4>
+                  <p>$21.99</p>
+                </figcaption>
+              </figure>
+            </a>
+            <div class="card-actions">
+              <button class="add-cart">Add to Cart</button>
+              <label>
+                <input type="checkbox" class="compare-checkbox" data-product="4"> Compare
+              </label>
             </div>
-        </div>
-        <div id="modal-6" class="modal">
-            <div class="modal-content">
-                <span class="close" data-modal="6">&times;</span>
-                <h2>Leather Jacket</h2>
-                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" alt="Leather Jacket">
-                <p>Premium leather jacket with classic style. Perfect for a bold look.</p>
-                <ul>
-                    <li>Genuine Leather</li>
-                    <li>Zip Closure</li>
-                    <li>Two Side Pockets</li>
-                </ul>
+          </li>
+        </ul>
+      </section>
+
+
+      <section class="category">
+        <h3 id="shoes-heading" class="category-heading">Shoes</h3>
+        <ul class="products-grid">
+          <li class="product-card" data-category="shoes">
+            <a href="#product-5" class="product-link">
+              <figure>
+                <img src="products/running.jpeg" alt="Running Shoes">
+                <figcaption>
+                  <h4>Running Shoes</h4>
+                  <p>$49.99</p>
+                </figcaption>
+              </figure>
+            </a>
+            <div class="card-actions">
+              <button class="add-cart">Add to Cart</button>
+              <label>
+                <input type="checkbox" class="compare-checkbox" data-product="5"> Compare
+              </label>
             </div>
+          </li>
+
+
+          <li class="product-card" data-category="shoes">
+            <a href="#product-5" class="product-link">
+              <figure>
+                <img src="products/loafers.jpeg" alt="Loafers">
+                <figcaption>
+                  <h4>Loafers</h4>
+                  <p>$49.99</p>
+                </figcaption>
+              </figure>
+            </a>
+            <div class="card-actions">
+              <button class="add-cart">Add to Cart</button>
+              <label>
+                <input type="checkbox" class="compare-checkbox" data-product="5"> Compare
+              </label>
+            </div>
+          </li>
+
+
+
+          <li class="product-card" data-category="shoes">
+            <a href="#product-5" class="product-link">
+              <figure>
+                <img src="products/chelsea.jpeg" alt="Chelsea Boots">
+                <figcaption>
+                  <h4>Chelsea Boots</h4>
+                  <p>$49.99</p>
+                </figcaption>
+              </figure>
+            </a>
+            <div class="card-actions">
+              <button class="add-cart">Add to Cart</button>
+              <label>
+                <input type="checkbox" class="compare-checkbox" data-product="5"> Compare
+              </label>
+            </div>
+          </li>
+
+
+          <li class="product-card" data-category="shoes">
+            <a href="#product-5" class="product-link">
+              <figure>
+                <img src="products/rugged.jpeg" alt="Rugged Boots">
+                <figcaption>
+                  <h4>Rugged Boots</h4>
+                  <p>$49.99</p>
+                </figcaption>
+              </figure>
+            </a>
+            <div class="card-actions">
+              <button class="add-cart">Add to Cart</button>
+              <label>
+                <input type="checkbox" class="compare-checkbox" data-product="5"> Compare
+              </label>
+            </div>
+          </li>
+
+        </ul>
+      </section>
+
+
+
+
+      <section class="category">
+        <h3 id="jackets-heading" class="category-heading">Jackets</h3>
+        <ul class="products-grid">
+
+          <li class="product-card" data-category="jackets">
+            <a href="#product-6" class="product-link">
+              <figure>
+                <img src="products/leather.jpeg" alt="Leather Jacket">
+                <figcaption>
+                  <h4>Classic Leather Jacket</h4>
+                  <p>$89.99</p>
+                </figcaption>
+              </figure>
+            </a>
+            <div class="card-actions">
+              <button class="add-cart">Add to Cart</button>
+              <label>
+                <input type="checkbox" class="compare-checkbox" data-product="6"> Compare
+              </label>
+            </div>
+          </li>
+
+
+          <li class="product-card" data-category="jackets">
+            <a href="#product-6" class="product-link">
+              <figure>
+                <img src="products/bomber.jpeg" alt="Bomber Jacket">
+                <figcaption>
+                  <h4>Bomber Jacket</h4>
+                  <p>$89.99</p>
+                </figcaption>
+              </figure>
+            </a>
+            <div class="card-actions">
+              <button class="add-cart">Add to Cart</button>
+              <label>
+                <input type="checkbox" class="compare-checkbox" data-product="6"> Compare
+              </label>
+            </div>
+          </li>
+
+
+          <li class="product-card" data-category="jackets">
+            <a href="#product-6" class="product-link">
+              <figure>
+                <img src="products/trench.jpeg" alt="Trench Coat">
+                <figcaption>
+                  <h4>Trench Coat</h4>
+                  <p>$89.99</p>
+                </figcaption>
+              </figure>
+            </a>
+            <div class="card-actions">
+              <button class="add-cart">Add to Cart</button>
+              <label>
+                <input type="checkbox" class="compare-checkbox" data-product="6"> Compare
+              </label>
+            </div>
+          </li>
+
+
+
+          <li class="product-card" data-category="jackets">
+            <a href="#product-6" class="product-link">
+              <figure>
+                <img src="products/varsity.jpeg" alt="Varsity Jacket">
+                <figcaption>
+                  <h4>Varsity Jacket</h4>
+                  <p>$89.99</p>
+                </figcaption>
+              </figure>
+            </a>
+            <div class="card-actions">
+              <button class="add-cart">Add to Cart</button>
+              <label>
+                <input type="checkbox" class="compare-checkbox" data-product="6"> Compare
+              </label>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+
+
+
+      <section class="category">
+        <h3 id="denim-heading" class="category-heading">Denim</h3>
+        <ul class="products-grid">
+
+
+
+
+          <li class="product-card" data-category="denim">
+            <a href="#product-10" class="product-link">
+              <figure>
+                <img src="products/slim.jpeg" alt="Slim Fit Jeans">
+                <figcaption>
+                  <h4>Slim Fit Jeans</h4>
+                  <p>$59.99</p>
+                </figcaption>
+              </figure>
+            </a>
+            <div class="card-actions">
+              <button class="add-cart">Add to Cart</button>
+              <label>
+                <input type="checkbox" class="compare-checkbox" data-product="10"> Compare
+              </label>
+            </div>
+          </li>
+
+          <li class="product-card" data-category="denim">
+            <a href="#product-11" class="product-link">
+              <figure>
+                <img src="products/straight.jpeg" alt="Straight Fit Jeans">
+                <figcaption>
+                  <h4>Straight Fit Jeans</h4>
+                  <p>$64.99</p>
+                </figcaption>
+              </figure>
+            </a>
+            <div class="card-actions">
+              <button class="add-cart">Add to Cart</button>
+              <label>
+                <input type="checkbox" class="compare-checkbox" data-product="11"> Compare
+              </label>
+            </div>
+          </li>
+
+          <li class="product-card" data-category="denim">
+            <a href="#product-12" class="product-link">
+              <figure>
+                <img src="products/ripped.jpeg" alt="Ripped Jeans">
+                <figcaption>
+                  <h4>Ripped Jeans</h4>
+                  <p>$69.99</p>
+                </figcaption>
+              </figure>
+            </a>
+            <div class="card-actions">
+              <button class="add-cart">Add to Cart</button>
+              <label>
+                <input type="checkbox" class="compare-checkbox" data-product="12"> Compare
+              </label>
+            </div>
+          </li>
+
+          <li class="product-card" data-category="denim">
+            <a href="#product-13" class="product-link">
+              <figure>
+                <img src="products/high.jpeg" alt="High-Waist Jeans">
+                <figcaption>
+                  <h4>High-Waist Jeans</h4>
+                  <p>$74.99</p>
+                </figcaption>
+              </figure>
+            </a>
+            <div class="card-actions">
+              <button class="add-cart">Add to Cart</button>
+              <label>
+                <input type="checkbox" class="compare-checkbox" data-product="13"> Compare
+              </label>
+            </div>
+          </li>
+
+
+
+        </ul>
+      </section>
+    </section>
+
+
+
+
+  </main>
+    <!-- Product detail modals (CSS :target) -->
+    <div id="product-1" class="modal">
+      <div class="modal-content">
+        <a class="close" href="#">×</a>
+        <h2>Classic White T-Shirt</h2>
+        <div class="modal-body">
+          <img src="products/white_tshirt.webp" alt="Classic White T-Shirt">
+          <div class="details">
+            <p class="price">$19.99</p>
+            <ul>
+              <li>Material: 100% Cotton (Breathable)</li>
+              <li>Fit: Classic unisex fit</li>
+              <li>Care: Machine wash cold, tumble dry low</li>
+              <li>Available Sizes: S, M, L, XL</li>
+            </ul>
+            <button class="banner-btn">Add to Cart</button>
+          </div>
         </div>
-    </main>
-</main>
-<script>
-// Modal logic for product details
-document.querySelectorAll('.view-details').forEach(btn => {
-    btn.addEventListener('click', function() {
-        document.getElementById('modal-' + this.dataset.product).style.display = 'block';
-    });
-});
-document.querySelectorAll('.close').forEach(span => {
-    span.addEventListener('click', function() {
-        document.getElementById('modal-' + this.dataset.modal).style.display = 'none';
-    });
-});
-window.onclick = function(event) {
-    document.querySelectorAll('.modal').forEach(modal => {
-        if (event.target == modal) {
-            modal.style.display = 'none';
-        }
-    });
-}
-</script>
-</body>
-</html>
+      </div>
+    </div>
+
+    <div id="product-2" class="modal">
+      <div class="modal-content">
+        <a class="close" href="#">×</a>
+        <h2>Graphic T-Shirt</h2>
+        <div class="modal-body">
+          <img src="products/graphic.webp" alt="Graphic T-Shirt">
+          <div class="details">
+            <p class="price">$24.99</p>
+            <ul>
+              <li>Material: 60% Cotton, 40% Polyester</li>
+              <li>Fit: Slim fit</li>
+              <li>Feature: High-quality print</li>
+              <li>Available Sizes: S, M, L</li>
+            </ul>
+            <button class="banner-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="product-3" class="modal">
+      <div class="modal-content">
+        <a class="close" href="#">×</a>
+        <h2>Striped T-Shirt</h2>
+        <div class="modal-body">
+          <img src="products/striped.jpeg" alt="Striped T-Shirt">
+          <div class="details">
+            <p class="price">$22.99</p>
+            <ul>
+              <li>Material: Cotton blend</li>
+              <li>Fit: Regular</li>
+              <li>Pattern: Horizontal stripes</li>
+              <li>Available Sizes: S, M, L, XL</li>
+            </ul>
+            <button class="banner-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="product-4" class="modal">
+      <div class="modal-content">
+        <a class="close" href="#">×</a>
+        <h2>V-Neck T-Shirt</h2>
+        <div class="modal-body">
+          <img src="products/vneck.jpeg" alt="V-Neck T-Shirt">
+          <div class="details">
+            <p class="price">$21.99</p>
+            <ul>
+              <li>Material: Soft cotton</li>
+              <li>Fit: Slim</li>
+              <li>Neck: V-neck style</li>
+              <li>Available Sizes: S, M, L</li>
+            </ul>
+            <button class="banner-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="product-5" class="modal">
+      <div class="modal-content">
+        <a class="close" href="#">×</a>
+        <h2>Running Shoes</h2>
+        <div class="modal-body">
+          <img src="products/running.jpeg" alt="Running Shoes">
+          <div class="details">
+            <p class="price">$49.99</p>
+            <ul>
+              <li>Upper: Breathable mesh</li>
+              <li>Sole: Cushioned EVA midsole</li>
+              <li>Use: Running / Training</li>
+              <li>Available Sizes: 7-12</li>
+            </ul>
+            <button class="banner-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="product-6" class="modal">
+      <div class="modal-content">
+        <a class="close" href="#">×</a>
+        <h2>Classic Leather Jacket</h2>
+        <div class="modal-body">
+          <img src="products/leather.jpeg" alt="Classic Leather Jacket">
+          <div class="details">
+            <p class="price">$89.99</p>
+            <ul>
+              <li>Material: Genuine leather</li>
+              <li>Fit: Regular</li>
+              <li>Care: Leather cleaner only</li>
+              <li>Available Sizes: M, L, XL</li>
+            </ul>
+            <button class="banner-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="product-10" class="modal">
+      <div class="modal-content">
+        <a class="close" href="#">×</a>
+        <h2>Slim Fit Jeans</h2>
+        <div class="modal-body">
+          <img src="products/slim.jpeg" alt="Slim Fit Jeans">
+          <div class="details">
+            <p class="price">$59.99</p>
+            <ul>
+              <li>Material: Stretch denim</li>
+              <li>Fit: Slim</li>
+              <li>Waist options: 28-36</li>
+              <li>Care: Machine wash cold</li>
+            </ul>
+            <button class="banner-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="product-11" class="modal">
+      <div class="modal-content">
+        <a class="close" href="#">×</a>
+        <h2>Straight Fit Jeans</h2>
+        <div class="modal-body">
+          <img src="products/straight.jpeg" alt="Straight Fit Jeans">
+          <div class="details">
+            <p class="price">$64.99</p>
+            <ul>
+              <li>Material: Cotton-rich denim</li>
+              <li>Fit: Straight</li>
+              <li>Waist options: 28-38</li>
+              <li>Care: Machine wash cold</li>
+            </ul>
+            <button class="banner-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="product-12" class="modal">
+      <div class="modal-content">
+        <a class="close" href="#">×</a>
+        <h2>Ripped Jeans</h2>
+        <div class="modal-body">
+          <img src="products/ripped.jpeg" alt="Ripped Jeans">
+          <div class="details">
+            <p class="price">$69.99</p>
+            <ul>
+              <li>Material: Premium denim</li>
+              <li>Fit: Trendy ripped style</li>
+              <li>Waist options: 28-36</li>
+              <li>Care: Spot clean recommended</li>
+            </ul>
+            <button class="banner-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="product-13" class="modal">
+      <div class="modal-content">
+        <a class="close" href="#">×</a>
+        <h2>High-Waist Jeans</h2>
+        <div class="modal-body">
+          <img src="products/high.jpeg" alt="High-Waist Jeans">
+          <div class="details">
+            <p class="price">$74.99</p>
+            <ul>
+              <li>Material: Comfort stretch denim</li>
+              <li>Fit: High waist, tapered leg</li>
+              <li>Waist options: 26-34</li>
+              <li>Care: Machine wash cold</li>
+            </ul>
+            <button class="banner-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+  </html>
+  

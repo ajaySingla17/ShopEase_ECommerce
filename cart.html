@@ -1,60 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart - ShopEase</title>
-    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="logo.png">
+      <link rel="stylesheet" href="index.css"> 
+    <link rel="stylesheet" href="cart.css"> 
+    <title>ShopEase | Your Shopping Cart</title>
 </head>
+
 <body>
     <header>
-        <div class="navbar-container">
-            <div class="navbar-left">
-                <div class="logo-area">
-                    <img src="logo.png" alt="ShopEase Logo" class="logo-image">
-                    <span class="brand-name">ShopEase</span>
-                </div>
-            </div>
-            <div class="navbar-center">
-                <nav>
-                    <a href="index.html">Shop</a>
-                    <a href="compare.html">Compare</a>
-                    <a href="cart.html">Cart</a>
-                    <a href="inquiry.html">Inquiry</a>
-                </nav>
-            </div>
-            <div class="navbar-right">
-                <button class="icon-btn" title="Search">
-                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="7" stroke="#007b5e" stroke-width="2"/>
-                        <line x1="15.4142" y1="15" x2="20" y2="19.5858" stroke="#007b5e" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </button>
-                <button class="icon-btn" title="Login">
-                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="11" cy="8" r="4" stroke="#007b5e" stroke-width="2"/>
-                        <path d="M3 19c0-3.5 3.5-6 8-6s8 2.5 8 6" stroke="#007b5e" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </button>
-            </div>
+    <nav class="navbar-container">
+
+
+      <nav class="left_navbar">
+        <nav class="logo_area">
+          <img src="logo.png" alt="LOGO_IMAGE">
+          <span class="brand_name">ShopEase</span>
+        </nav>
+      </nav>
+
+
+
+
+
+      <div class="center_navbar">
+
+        <nav class="button_area">
+          <a href="index.html"> <i class="fa-solid fa-shirt"></i> Shop</a>
+          <a href="comparision.html"> <i class="fa-solid fa-exchange-alt"></i> Compare</a>
+          <a href="cart.html"> <i class="fa-solid fa-shopping-cart"></i> Cart</a>
+          <a href="inquiry.html"> <i class="fa-solid fa-question-circle"></i> Inquiry</a>
+        </nav>
+      </div>
+
+
+
+      <nav class="right_navbar">
+        <button class="icon-btn" title="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <div class="InputContainer">
+          <input placeholder="Search.." id="input" class="input" name="text" type="text">
+
         </div>
-    </header>
-    <main>
-        <section class="cart-section">
-            <h2>Shopping Cart</h2>
-            <div class="cart-ui">
-                <p>Your cart is empty.</p>
-                <ul>
-                    <li>Classic White T-Shirt - $19.99 <button disabled>Remove</button></li>
-                    <li>Running Shoes - $49.99 <button disabled>Remove</button></li>
-                </ul>
-                <p><strong>Total: $69.98</strong></p>
-                <button disabled>Checkout</button>
+
+        <button class="icon_btn" title="Login">
+          <i class="fa-regular fa-user"></i>
+        </button>
+      </nav>
+    </nav>
+  </header>
+
+    <main class="cart-main">
+        <h1 class="page-title">Your Shopping Cart</h1>
+
+        <!-- 1. Cart View Section -->
+        <section class="cart-container" id="cart-view">
+            
+            <!-- A. Cart Items List -->
+            <div class="cart-items-list">
+                <!-- Mock Cart Item 1: T-Shirt -->
+                <article class="cart-item">
+                    <img src="products/white_tshirt.webp" alt="Classic White T-Shirt">
+                    <div class="item-details">
+                        <h4>Classic White T-Shirt (Size L)</h4>
+                        <p class="item-meta">Category: T-Shirts | Item ID: #1001</p>
+                    </div>
+                    <div class="item-actions">
+                        <label>Qty: <span>1</span></label>
+                        <p class="item-price">$19.99</p>
+                        <button class="remove-btn" title="Remove Item"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </article>
+
+                <!-- Mock Cart Item 2: Running Shoes -->
+                <article class="cart-item">
+                    <img src="products/running.jpeg" alt="Running Shoes">
+                    <div class="item-details">
+                        <h4>UltraBoost Running Shoes (Size 10)</h4>
+                        <p class="item-meta">Category: Shoes | Item ID: #2005</p>
+                    </div>
+                    <div class="item-actions">
+                        <label>Qty: <span>2</span></label>
+                        <p class="item-price">$99.98</p>
+                        <button class="remove-btn" title="Remove Item"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </article>
+                
+                <!-- Mock Cart Item 3: Denim Jeans -->
+                 <article class="cart-item">
+                    <img src="products/slim.jpeg" alt="Slim Fit Jeans">
+                    <div class="item-details">
+                        <h4>Slim Fit Indigo Jeans (Size 32)</h4>
+                        <p class="item-meta">Category: Denim | Item ID: #4010</p>
+                    </div>
+                    <div class="item-actions">
+                        <label>Qty: <span>1</span></label>
+                        <p class="item-price">$59.99</p>
+                        <button class="remove-btn" title="Remove Item"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- B. Cart Summary -->
+            <div class="cart-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-line">
+                    <span>Subtotal (4 Items)</span>
+                    <span class="value">$179.96</span>
+                </div>
+                <div class="summary-line">
+                    <span>Shipping Estimate</span>
+                    <span class="value">$10.00</span>
+                </div>
+                <div class="summary-line discount">
+                    <span>Discount</span>
+                    <span class="value text-green">-$10.00</span>
+                </div>
+                <div class="summary-line total">
+                    <span>Order Total</span>
+                    <span class="value total-value">$179.96</span>
+                </div>
+
+                <!-- Checkout button links to the payment section below -->
+                <a href="#checkout-section" class="checkout-btn">Proceed to Checkout</a>
             </div>
         </section>
+
+        <!-- Spacer for visual separation -->
+        <div class="section-divider"></div>
+
+
+        <!-- 2. Checkout Section -->
+        <section class="checkout-section" id="checkout-section">
+            <h2 class="section-title">2. Select Payment Method</h2>
+            
+            <form class="payment-form">
+                
+                <!-- Payment Options -->
+                <fieldset class="payment-options">
+                    <legend class="visually-hidden">Choose a payment method</legend>
+                    
+                    <!-- Option 1: Debit Card -->
+                    <label class="payment-card">
+                        <input type="radio" name="payment" value="debit" id="debit-card" checked>
+                        <span class="card-content">
+                            <i class="fa-solid fa-credit-card"></i>
+                            <span class="card-text">Debit/Credit Card</span>
+                            <i class="fa-solid fa-chevron-right arrow-icon"></i>
+                        </span>
+                    </label>
+
+                    <!-- Option 2: UPI -->
+                    <label class="payment-card">
+                        <input type="radio" name="payment" value="upi" id="upi">
+                        <span class="card-content">
+                            <i class="fa-solid fa-qrcode"></i>
+                            <span class="card-text">UPI (Unified Payments Interface)</span>
+                            <i class="fa-solid fa-chevron-right arrow-icon"></i>
+                        </span>
+                    </label>
+
+                    <!-- Option 3: Paytm -->
+                    <label class="payment-card">
+                        <input type="radio" name="payment" value="paytm" id="paytm">
+                        <span class="card-content">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <span class="card-text">Paytm Wallet</span>
+                            <i class="fa-solid fa-chevron-right arrow-icon"></i>
+                        </span>
+                    </label>
+
+                    <!-- Option 4: PhonePe -->
+                    <label class="payment-card">
+                        <input type="radio" name="payment" value="phonepe" id="phonepe">
+                        <span class="card-content">
+                            <i class="fa-solid fa-phone"></i>
+                            <span class="card-text">PhonePe</span>
+                            <i class="fa-solid fa-chevron-right arrow-icon"></i>
+                        </span>
+                    </label>
+                </fieldset>
+                
+                <!-- Pay button links to the success message -->
+                <!-- Note: The form submission is simulated by the anchor link, not actual processing -->
+                <a href="#payment-success" class="pay-btn" aria-label="Pay now">
+                     Pay $179.96 Now
+                </a>
+            </form>
+        </section>
+
+        <!-- 3. Payment Success Message (Hidden by default, shown via :target) -->
+        <!-- This container is visually hidden until the user clicks the "Pay" button which links to #payment-success -->
+        <div class="payment-success-section" id="payment-success">
+            <div class="success-message-box">
+                <i class="fa-solid fa-circle-check success-icon"></i>
+                <h2>PAYMENT SUCCESSFUL!</h2>
+                <p>Your order has been placed and will be processed shortly.</p>
+                <p class="final-greeting">RAB RAKHA!!🙏</p>
+                <a href="#cart-view" class="back-to-top-btn">Continue Shopping</a>
+            </div>
+        </div>
+
     </main>
-    <footer>
-        <p>&copy; 2025 ShopEase. All rights reserved.</p>
-    </footer>
 </body>
 </html>

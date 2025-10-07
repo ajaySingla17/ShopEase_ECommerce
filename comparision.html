@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Link to the custom comparison styling -->
+    <link rel="stylesheet" href="compare.css"> 
+    <link rel="stylesheet" href="index.css"> <!-- Assuming index.css contains shared styles like the header -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <title>ShopEase | Compare Products</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar-container">
+
+
+          <nav class="left_navbar">
+            <nav class="logo_area">
+              <img src="logo.png" alt="LOGO_IMAGE">
+              <span class="brand_name">ShopEase</span>
+            </nav>
+          </nav>
+
+
+
+          <div class="center_navbar">
+
+            <nav class="button_area">
+              <a href="index.html"> <i class="fa-solid fa-shirt"></i> Shop</a>
+              <a href="comparision.html"> <i class="fa-solid fa-exchange-alt"></i> Compare</a>
+              <a href="cart.html"> <i class="fa-solid fa-shopping-cart"></i> Cart</a>
+              <a href="inquiry.html"> <i class="fa-solid fa-question-circle"></i> Inquiry</a>
+            </nav>
+          </div>
+
+
+
+          <nav class="right_navbar">
+            <button class="icon-btn" title="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <div class="InputContainer">
+              <input placeholder="Search.." id="input" class="input" name="text" type="text">
+
+            </div>
+
+            <button class="icon_btn" title="Login">
+              <i class="fa-regular fa-user"></i>
+            </button>
+          </nav>
+        </nav>
+      </header>
+
+    <main class="compare-main">
+        <h1 class="page-title">Product Comparison Center</h1>
+        <p class="subtitle">Compare key specifications and features side-by-side to make the best choice.</p>
+
+        <section id="comparison-section">
+      <div id="compare-table-container">
+        <table class="comparison-table">
+          <thead>
+            <tr class="product-header">
+              <th></th>
+              <th>
+                <div class="product-info-cell">
+                  <img src="products/leather.jpeg" alt="Classic Leather Jacket">
+                  <h4>Classic Leather Jacket</h4>
+                  <p class="price">$89.99</p>
+                </div>
+              </th>
+              <th>
+                <div class="product-info-cell">
+                  <img src="products/bomber.jpeg" alt="Bomber Jacket">
+                  <h4>Bomber Jacket</h4>
+                  <p class="price">$89.99</p>
+                </div>
+              </th>
+              <th>
+                <div class="product-info-cell">
+                  <img src="products/trench.jpeg" alt="Trench Coat">
+                  <h4>Trench Coat</h4>
+                  <p class="price">$89.99</p>
+                </div>
+              </th>
+              <th>
+                <div class="product-info-cell">
+                  <img src="products/varsity.jpeg" alt="Varsity Jacket">
+                  <h4>Varsity Jacket</h4>
+                  <p class="price">$89.99</p>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="static-row">
+              <td>Category</td>
+              <td>Jackets</td>
+              <td>Jackets</td>
+              <td>Jackets</td>
+              <td>Jackets</td>
+            </tr>
+
+            <tr class="static-row">
+              <td>Price</td>
+              <td>$89.99</td>
+              <td>$89.99</td>
+              <td>$89.99</td>
+              <td>$89.99</td>
+            </tr>
+
+            <tr class="feature-row">
+              <td>Material</td>
+              <td>Genuine Sheepskin Leather</td>
+              <td>Nylon shell with quilted lining</td>
+              <td>Water-resistant cotton blend</td>
+              <td>Wool blend with leather sleeves</td>
+            </tr>
+
+            <tr class="feature-row">
+              <td>Fit</td>
+              <td>Regular</td>
+              <td>Regular</td>
+              <td>Tailored</td>
+              <td>Relaxed</td>
+            </tr>
+
+            <tr class="feature-row">
+              <td>Sleeve</td>
+              <td>Long</td>
+              <td>Long</td>
+              <td>Long</td>
+              <td>Long</td>
+            </tr>
+
+            <tr class="feature-row">
+              <td>Color Options</td>
+              <td>1</td>
+              <td>3</td>
+              <td>2</td>
+              <td>2</td>
+            </tr>
+
+            <tr class="feature-row">
+              <td>Care</td>
+              <td>Leather cleaner only</td>
+              <td>Machine washable (gentle)</td>
+              <td>Spot clean</td>
+              <td>Dry clean</td>
+            </tr>
+
+            <tr class="feature-row">
+              <td>Rating</td>
+              <td><div class="rating-stars"><i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i class="fa-regular fa-star empty"></i></div></td>
+              <td><div class="rating-stars"><i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i class="fa-solid fa-star half"></i><i class="fa-regular fa-star empty"></i></div></td>
+              <td><div class="rating-stars"><i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i></div></td>
+              <td><div class="rating-stars"><i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i class="fa-regular fa-star empty"></i></div></td>
+            </tr>
+
+            <tr class="feature-row">
+              <td>Actions</td>
+              <td><button class="add-to-cart-btn">Add to Cart</button></td>
+              <td><button class="add-to-cart-btn">Add to Cart</button></td>
+              <td><button class="add-to-cart-btn">Add to Cart</button></td>
+              <td><button class="add-to-cart-btn">Add to Cart</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+        </section>
+    </main>
+</body>
+</html>
+

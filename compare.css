@@ -1,145 +1,215 @@
-/* Styles specific to compare.html */
+/*
+ * ShopEase Product Comparison Styling
+ * Styles for the compare.html page
+ */
 
-/* Base Styles */
-body {
-	font-family: 'Segoe UI', Arial, sans-serif;
-	margin: 0;
-	background: #f8f9fa;
-	color: #222;
-	padding: 0;
-	overflow-x: hidden;
-}
-main {
-	max-width: 1200px;
-	margin: 2rem auto;
-	padding: 0 1rem;
-}
-footer {
-	background: #222;
-	color: #fff;
-	text-align: center;
-	padding: 1rem 0;
-	margin-top: 3rem;
+/* Assuming index.css or a global style handles body, header, and primary colors. 
+   We define local variables for clarity and fallback. */
+:root {
+    --primary-color: #1a73e8; 
+    --secondary-color: #34a853; 
+    --text-dark: #202124;
+    --text-light: #5f6368;
+    --background-light: #f8f9fa;
+    --card-bg: #ffffff;
+    --border-color: #dadce0;
+    --row-highlight: #e8f0fe; /* Light blue for primary action/header highlight */
 }
 
-/* Navbar Styles */
-header {
-	background: #000;
-	color: #fff;
-	padding: 0.5rem 0;
-}
-.navbar-container {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 1.5rem;
-	height: 64px;
-	background: #000;
-}
-.navbar-left {
-	flex: 1;
-	display: flex;
-	align-items: center;
-}
-.logo-area {
-	display: flex;
-	align-items: center;
-	gap: 0.7rem;
-}
-.navbar-center {
-	flex: 2;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.navbar-center nav {
-	display: flex;
-	align-items: center;
-	gap: 1.2rem;
-}
-.navbar-right {
-	flex: 1;
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	gap: 0.5rem;
-}
-.icon-btn {
-	background: #fff;
-	border: none;
-	border-radius: 50%;
-	width: 38px;
-	height: 38px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	cursor: pointer;
-	transition: background 0.2s;
-	margin-left: 0.2rem;
-	box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-	padding: 0;
-}
-.icon-btn:hover {
-	background: #e9ecef;
-}
-.logo-image {
-	width: 38px;
-	height: 38px;
-	border-radius: 50%;
-	object-fit: cover;
-	background: #fff;
-	box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-}
-.brand-name {
-	font-size: 1.6rem;
-	font-weight: 700;
-	color: #fff;
-	letter-spacing: 1px;
-}
-header nav {
-	display: flex;
-	align-items: center;
-	gap: 1.2rem;
-}
-header nav a {
-	color: #fff;
-	text-decoration: none;
-	font-weight: 500;
-	font-size: 1.08rem;
-	padding: 0.3rem 0.7rem;
-	border-radius: 4px;
-	transition: background 0.2s;
-}
-header nav a:hover {
-	background: #007b5e;
-	text-decoration: none;
+/* Ensure the main content area is centered and padded */
+.compare-main {
+    padding: 2rem 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-/* Comparison Section Styles */
-.comparison-section {
-	margin: 3rem 0;
+.page-title {
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
 }
+
+.subtitle {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+/* --- Comparison Table Styling --- */
+#compare-table-container {
+    overflow-x: auto; /* Allows horizontal scrolling on small screens */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
 .comparison-table {
-	width: 100%;
-	border-collapse: collapse;
-	background: #fff;
-	border-radius: 8px;
-	overflow: hidden;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    width: 100%;
+    border-collapse: separate; /* Required for rounded corners on cells/rows */
+    border-spacing: 0;
+    min-width: 700px; /* Forces horizontal scroll if screen is too small for 3 columns */
+    background-color: var(--card-bg);
 }
+
 .comparison-table th, .comparison-table td {
-	border: 1px solid #e0e0e0;
-	padding: 0.75rem 1rem;
-	text-align: center;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
 }
-.comparison-table th {
-	background: #007b5e;
-	color: #fff;
+
+/* Feature/Row Header Column (The left-most column) */
+.comparison-table td:first-child {
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+    border-right: 1px solid var(--border-color);
+    position: sticky; /* Keep feature names visible while scrolling horizontally */
+    left: 0;
+    z-index: 20;
+    padding-left: 1.5rem;
 }
-@media (max-width: 600px) {
-	.comparison-table th, .comparison-table td {
-		padding: 0.5rem;
-	}
+
+.comparison-table tr:nth-child(even) td:not(:first-child) {
+    background-color: #fcfdff; /* Slight alternating row color for readability */
+}
+
+/* Static rows for Category/Price */
+.static-row td:not(:first-child) {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+
+/* --- Product Header Row --- */
+.product-header {
+    background-color: var(--row-highlight);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.product-header h3 {
+    text-align: left; /* Adjust feature column header */
+}
+
+.product-info-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.product-info-cell img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.product-info-cell h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    height: 3rem; /* Fixed height for consistent alignment */
+    overflow: hidden;
+    margin: 0;
+}
+
+.product-info-cell .price {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--secondary-color);
+    margin: 0.5rem 0;
+}
+
+/* --- Features Styling --- */
+
+.rating-stars i {
+    color: #ffc107; /* Yellow star color */
+    margin: 0 1px;
+    font-size: 1.1rem;
+}
+
+.not-available {
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+    max-width: 150px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #318e4b;
+}
+
+/* --- Empty State Styling --- */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+}
+
+.empty-state .icon-xl {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.empty-state h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.empty-state p a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* --- Responsiveness: Mobile Adjustments --- */
+@media (max-width: 768px) {
+    .compare-main {
+        padding: 1rem 0.5rem;
+    }
+    .page-title {
+        font-size: 1.75rem;
+    }
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .comparison-table th, .comparison-table td {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .product-info-cell img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .product-info-cell h4 {
+        font-size: 0.9rem;
+        height: 2.7rem;
+    }
 }
