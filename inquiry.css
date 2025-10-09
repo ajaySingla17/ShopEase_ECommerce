@@ -1,64 +1,208 @@
-/* Modern contact/inquiry page styles (image-free) */
-
-:root{
+:root {
     --primary-color: #1a73e8;
     --secondary-color: #34a853;
     --bg: #f7f8fb;
     --card-bg: #ffffff;
     --muted: #6b7280;
-    --shadow: 0 8px 30px rgba(16,24,40,0.08);
+    --shadow: 0 8px 30px rgba(16, 24, 40, 0.08);
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%;font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial; background:var(--bg); color:#111827}
-
-/* Keep header layout consistent with index.css — only small overrides here */
-.navbar-container{max-width:1400px;
-    margin:0 auto;
-    padding:0 1.5rem;
-    display:flex;
-    align-items:center;
-    justify-content:space-between}
-
-.inquiry-page-container{padding-top:4.5rem;min-height:calc(100vh - 4.5rem);display:flex;align-items:center;justify-content:center}
-
-.inquiry-hero{width:100%;display:flex;align-items:center;justify-content:center;padding:3rem 1rem}
-
-.contact-card{background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(250,250,250,0.95));width:100%;max-width:1100px;border-radius:14px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
-
-.contact-left{padding:48px 40px;background:linear-gradient(135deg, rgba(26,115,232,0.04), rgba(52,168,83,0.02));display:flex;flex-direction:column;gap:20px}
-.contact-left h1{font-size:1.75rem;color:var(--primary-color)}
-.contact-left .lead{color:var(--muted);line-height:1.5}
-.contact-details{margin-top:8px;display:flex;flex-direction:column;gap:12px}
-.detail-row{display:flex;gap:12px;align-items:center}
-.detail-row i{background:rgba(255,255,255,0.8);padding:12px;border-radius:8px;color:var(--primary-color);font-size:18px;min-width:44px;text-align:center;box-shadow:0 4px 12px rgba(26,115,232,0.06)}
-.detail-row h4{margin:0;font-size:0.95rem}
-.detail-row a{color:#0f172a;font-weight:600;text-decoration:none}
-.small-muted{color:var(--muted);font-size:0.9rem}
-
-.contact-right{padding:40px;display:flex;align-items:center;justify-content:center}
-.inquiry-form{width:100%;max-width:420px;display:flex;flex-direction:column;gap:14px}
-.inquiry-form label{font-size:0.85rem;color:var(--muted);margin-bottom:6px}
-.inquiry-form input,.inquiry-form textarea{width:100%;padding:12px 14px;border:1px solid #e6e9ee;border-radius:10px;background:var(--card-bg);font-size:0.95rem;resize:vertical}
-.inquiry-form textarea{min-height:140px}
-.form-actions{display:flex;gap:12px;align-items:center}
-.banner-btn{background:var(--secondary-color);color:#fff;padding:10px 18px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
-.btn-ghost{background:transparent;border:1px solid rgba(15,23,42,0.06);padding:10px 18px;border-radius:10px;cursor:pointer}
-
-/* Responsive: stack columns on small screens */
-@media (max-width:900px){
-    .contact-card{grid-template-columns:1fr}
-    .contact-left{padding:28px}
-    .contact-right{padding:28px}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
 }
 
-@media (max-width:480px){
-    .inquiry-hero{padding:2rem 0.75rem}
-    .contact-left h1{font-size:1.4rem}
+html,
+body {
+    height: 100%;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: var(--bg);
+    color: #111827
 }
 
-/* Focus styles for accessibility */
-.inquiry-form input:focus,.inquiry-form textarea:focus{outline:3px solid rgba(26,115,232,0.12);outline-offset:2px;border-color:rgba(26,115,232,0.32)}
+.navbar-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
 
-/* Small utilities */
-.active-nav{color:var(--primary-color);border-bottom:2px solid var(--primary-color)}
+.inquiry-page-container {
+    padding-top: 4.5rem;
+    min-height: calc(100vh - 4.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.inquiry-hero {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem
+}
+
+.contact-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(250, 250, 250, 0.95));
+    width: 100%;
+    max-width: 1100px;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden
+}
+
+.contact-left {
+    padding: 48px 40px;
+    background: linear-gradient(135deg, rgba(26, 115, 232, 0.04), rgba(52, 168, 83, 0.02));
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.contact-left h1 {
+    font-size: 1.75rem;
+    color: var(--primary-color)
+}
+
+.contact-left .lead {
+    color: var(--muted);
+    line-height: 1.5
+}
+
+.contact-details {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.detail-row {
+    display: flex;
+    gap: 12px;
+    align-items: center
+}
+
+.detail-row i {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 12px;
+    border-radius: 8px;
+    color: var(--primary-color);
+    font-size: 18px;
+    min-width: 44px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(26, 115, 232, 0.06)
+}
+
+.detail-row h4 {
+    margin: 0;
+    font-size: 0.95rem
+}
+
+.detail-row a {
+    color: #0f172a;
+    font-weight: 600;
+    text-decoration: none
+}
+
+.small-muted {
+    color: var(--muted);
+    font-size: 0.9rem
+}
+
+.contact-right {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.inquiry-form {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px
+}
+
+.inquiry-form label {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 6px
+}
+
+.inquiry-form input,
+.inquiry-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #e6e9ee;
+    border-radius: 10px;
+    background: var(--card-bg);
+    font-size: 0.95rem;
+    resize: vertical
+}
+
+.inquiry-form textarea {
+    min-height: 140px
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center
+}
+
+.banner-btn {
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700
+}
+
+.btn-ghost {
+    background: transparent;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer
+}
+
+@media (max-width:900px) {
+    .contact-card {
+        grid-template-columns: 1fr
+    }
+
+    .contact-left {
+        padding: 28px
+    }
+
+    .contact-right {
+        padding: 28px
+    }
+}
+
+@media (max-width:480px) {
+    .inquiry-hero {
+        padding: 2rem 0.75rem
+    }
+
+    .contact-left h1 {
+        font-size: 1.4rem
+    }
+}
+
+.inquiry-form input:focus,
+.inquiry-form textarea:focus {
+    outline: 3px solid rgba(26, 115, 232, 0.12);
+    outline-offset: 2px;
+    border-color: rgba(26, 115, 232, 0.32)
+}
+

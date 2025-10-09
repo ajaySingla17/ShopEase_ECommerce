@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShopEase Inquiry/Contact</title>
-    <!-- Links to Font Awesome and the specific CSS file for this page -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="stylesheet" href="index.css"> 
@@ -12,7 +11,7 @@
 
 </head>
 <body>
-        <!-- Header (copied from index.html for consistent navigation) -->
+        
         <header>
                 <nav class="navbar-container">
 
@@ -54,7 +53,6 @@
                 </nav>
             </header>
 
-        <!-- Main content area: modern, image-free inquiry page -->
         <main class="inquiry-page-container">
             <section class="inquiry-hero">
                 <div class="contact-card">
@@ -75,7 +73,7 @@
                                 <i class="fa-solid fa-phone"></i>
                                 <div>
                                     <h4>Phone</h4>
-                                    <a href="tel:+1234567890">+1 (234) 567-890</a>
+                                    <a href="tel:+1234567890">9814620044</a>
                                 </div>
                             </div>
 
@@ -92,15 +90,15 @@
                     </div>
 
                     <div class="contact-right">
-                        <form class="inquiry-form" method="post" action="#">
+                        <form class="inquiry-form">
                             <div class="form-row">
                                 <label for="name">Full name</label>
-                                <input id="name" name="name" type="text" placeholder="Your full name" required>
+                                <input id="name" name="name" type="text" placeholder="Your full name" required pattern="[A-Za-z\s]+" title="Name should only contain letters and spaces" required>
                             </div>
 
                             <div class="form-row">
                                 <label for="email">Email</label>
-                                <input id="email" name="email" type="email" placeholder="you@example.com" required>
+                                <input id="email" name="email" type="email" placeholder="you@example.com"  required>
                             </div>
 
                             <div class="form-row">
@@ -114,7 +112,7 @@
                             </div>
 
                             <div class="form-actions">
-                                <button type="submit" class="banner-btn">Send message</button>
+                                <button type="submit" class="banner-btn" method="post" action="submit">Send message</button>
                                 <button type="reset" class="btn-ghost">Reset</button>
                             </div>
                         </form>

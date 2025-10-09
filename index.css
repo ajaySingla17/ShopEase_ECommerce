@@ -1,13 +1,6 @@
-/*
- * ShopEase Professional E-commerce Styling
- * ========================================
- * Implements a clean, modern, and fully responsive layout.
- */
-
-/* 1. Global Reset & Variables */
 :root {
-    --primary-color: #1a73e8; /* Google Blue - for main actions/buttons */
-    --secondary-color: #34a853; /* Green - for success/add to cart */
+    --primary-color: #1a73e8;
+    --secondary-color: #34a853;
     --text-dark: #202124;
     --text-light: #5f6368;
     --background-light: #f8f9fa;
@@ -18,7 +11,9 @@
     --header-height: 72px;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -37,17 +32,14 @@ a {
     color: var(--text-dark);
 }
 
-
-/* 2. Header & Navigation */
 header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    /* Subtle glass effect */
-    background: rgba(255,255,255,0.85);
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(6px) saturate(120%);
-    border-bottom: 1px solid rgba(16,24,40,0.04);
-    box-shadow: 0 6px 18px rgba(16,24,40,0.04);
+    border-bottom: 1px solid rgba(16, 24, 40, 0.04);
+    box-shadow: 0 6px 18px rgba(16, 24, 40, 0.04);
     height: var(--header-height);
     display: flex;
     align-items: center;
@@ -72,7 +64,6 @@ header {
 }
 
 .logo_area img {
-    /* Placeholder for the logo image */
     width: 56px;
     height: 56px;
     object-fit: contain;
@@ -86,10 +77,9 @@ header {
     letter-spacing: -0.2px;
 }
 
-/* Center Navigation (Main Links) */
 .center_navbar {
     flex-grow: 1;
-    display: none; /* Hidden on mobile, shown on desktop */
+    display: none;
     justify-content: center;
     color: var(--primary-color);
 }
@@ -99,63 +89,63 @@ header {
     margin: 0 0.35rem;
     font-weight: 600;
     font-size: 0.98rem;
-    border-radius: 999px; /* pill */
+    border-radius: 999px;
     transition: background-color 0.18s, color 0.18s, transform 0.08s;
-    color: rgba(15,23,42,0.75);
+    color: rgba(15, 23, 42, 0.75);
     display: inline-flex;
     align-items: center;
     gap: .5rem;
 }
 
 .center_navbar .button_area a:hover {
-    background-color: rgba(26,115,232,0.1);
+    background-color: rgba(26, 115, 232, 0.1);
     color: var(--primary-color);
     transform: translateY(-2px);
 }
 
-/* Active nav styling */
-.center_navbar .button_area a.active-nav{
-    background: linear-gradient(90deg, rgba(26,115,232,0.12), rgba(26,115,232,0.06));
+.center_navbar .button_area a.active-nav {
+    background: linear-gradient(90deg, rgba(26, 115, 232, 0.12), rgba(26, 115, 232, 0.06));
     color: var(--primary-color);
-    box-shadow: 0 6px 18px rgba(26,115,232,0.06);
+    box-shadow: 0 6px 18px rgba(26, 115, 232, 0.06);
+    border-bottom: 2px solid var(--primary-color);
 }
 
-/* Right Navigation (Icons) */
 .right_navbar {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
-/* From Uiverse.io by vinodjangid07 */ 
+
 .InputContainer {
-  width: 210px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(to bottom,rgb(227, 213, 255),rgb(255, 231, 231));
-  border-radius: 30px;
-  overflow: hidden;
-  cursor: pointer;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+    width: 210px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgb(227, 213, 255), rgb(255, 231, 231));
+    border-radius: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
 }
 
 .input {
-  width: 200px;
-  height: 40px;
-  border: none;
-  outline: none;
-  caret-color: rgb(255, 81, 0);
-  background-color: rgb(255, 255, 255);
-  border-radius: 30px;
-  padding-left: 15px;
-  letter-spacing: 0.8px;
-  color: rgb(19, 19, 19);
-  font-size: 13.4px;
+    width: 200px;
+    height: 40px;
+    border: none;
+    outline: none;
+    caret-color: rgb(255, 81, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding-left: 15px;
+    letter-spacing: 0.8px;
+    color: rgb(19, 19, 19);
+    font-size: 13.4px;
 }
 
 
-.icon-btn, .icon_btn {
+.icon-btn,
+.icon_btn {
     background: none;
     border: none;
     color: var(--text-dark);
@@ -166,16 +156,15 @@ header {
     transition: background-color 0.2s;
 }
 
-.icon-btn:hover, .icon_btn:hover {
-    background-color: rgba(26,115,232,0.08);
+.icon-btn:hover,
+.icon_btn:hover {
+    background-color: rgba(26, 115, 232, 0.08);
 }
 
-/* 3. Banner Section */
 .banner-space {
     position: relative;
     width: 100%;
-    /* Give the banner a responsive explicit height so absolutely positioned children
-       don't collapse the container. Adjust values to taste. */
+
     height: clamp(400px, 40vh, 420px);
     overflow: hidden;
 }
@@ -187,6 +176,7 @@ header {
     object-fit: cover;
     filter: brightness(0.7);
 }
+
 .banner-content {
     position: absolute;
     top: 0;
@@ -200,24 +190,71 @@ header {
     padding: 1rem;
 }
 
-/* CSS-only slideshow for banner images */
-.banner-slideshow{position:absolute;inset:0;z-index:0}
-.banner-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.02);transition:opacity .6s ease,transform .6s ease}
-.banner-space:hover .banner-slide{animation-play-state:paused}
-.banner-slide:nth-child(1){animation:fade 12s infinite;animation-delay:0s}
-.banner-slide:nth-child(2){animation:fade 12s infinite;animation-delay:4s}
-.banner-slide:nth-child(3){animation:fade 12s infinite;animation-delay:8s}
-
-@keyframes fade{
-    0%{opacity:0;transform:scale(1.02)}
-    6%{opacity:1;transform:scale(1)}
-    30%{opacity:1;transform:scale(1)}
-    36%{opacity:0;transform:scale(0.98)}
-    100%{opacity:0}
+.banner-slideshow {
+    position: absolute;
+    inset: 0;
+    z-index: 0
 }
 
-/* Ensure banner content floats above slideshow */
-.banner-content{z-index:2}
+.banner-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(1.02);
+    transition: opacity .6s ease, transform .6s ease
+}
+
+.banner-space:hover .banner-slide {
+    animation-play-state: paused
+}
+
+.banner-slide:nth-child(1) {
+    animation: fade 12s infinite;
+    animation-delay: 0s
+}
+
+.banner-slide:nth-child(2) {
+    animation: fade 12s infinite;
+    animation-delay: 4s
+}
+
+.banner-slide:nth-child(3) {
+    animation: fade 12s infinite;
+    animation-delay: 8s
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: scale(1.02)
+    }
+
+    6% {
+        opacity: 1;
+        transform: scale(1)
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1)
+    }
+
+    36% {
+        opacity: 0;
+        transform: scale(0.98)
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+.banner-content {
+    z-index: 2
+}
 
 .banner-text h2 {
     color: #ffffff;
@@ -250,14 +287,13 @@ header {
     transform: translateY(-1px);
 }
 
-/* 4. Main Content & Product Listing */
 main {
     padding: 2rem 1.5rem;
     max-width: 1400px;
     margin: 0 auto;
 }
 
-.product-listing > h2 {
+product-listing>h2 {
     text-align: center;
     font-size: 2.25rem;
     font-weight: 700;
@@ -284,12 +320,9 @@ main {
     list-style: none;
     display: grid;
     gap: 1.5rem;
-    /* Adjusted: Lower minimum width to ensure 2 columns fit on most phones (320px+ width) */
-    /* smaller 'medium' cards */
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 }
 
-/* 5. Product Cards */
 .product-card {
     background-color: var(--card-bg);
     border-radius: 12px;
@@ -306,22 +339,48 @@ main {
 .product-card figure {
     display: flex;
     flex-direction: column;
-    height: 100%; /* Ensure figure takes full height */
+    height: 100%;
 }
 
-/* Make the product link cover the figure area */
-.product-link{display:block;color:inherit}
-.product-link figure{margin:0}
-.product-link img{transition:transform 0.25s}
-.product-link:hover img{transform:scale(1.03)}
+.product-link {
+    display: block;
+    color: inherit
+}
 
-.card-actions{display:flex;gap:0.5rem;align-items:center;padding:0.75rem 1rem}
-.card-actions .add-cart{flex:1}
-.card-actions label{font-size:0.95rem;color:var(--text-light);display:flex;align-items:center;gap:0.5rem}
+.product-link figure {
+    margin: 0
+}
+
+.product-link img {
+    transition: transform 0.25s
+}
+
+.product-link:hover img {
+    transform: scale(1.03)
+}
+
+.card-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.75rem 1rem
+}
+
+.card-actions .add-cart {
+    flex: 1
+}
+
+.card-actions label {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem
+}
 
 .product-card img {
     width: 100%;
-    height: 200px; /* reduced height for medium card */
+    height: 200px;
     object-fit: cover;
     transition: transform 0.3s;
 }
@@ -350,7 +409,6 @@ main {
     margin-bottom: 1rem;
 }
 
-/* Card Buttons */
 .product-card button {
     padding: 0.6rem 1rem;
     border: 1px solid var(--primary-color);
@@ -380,17 +438,16 @@ main {
     background-color: #318e4b;
 }
 
-/* Compare Checkbox */
 .compare-checkbox {
     margin-right: 0.5rem;
 }
+
 .product-card label {
     margin-top: 0.5rem;
     font-size: 0.9rem;
     color: var(--text-light);
 }
 
-/* 6. Modal Styling (Product Details) */
 .modal {
     position: fixed;
     top: 0;
@@ -398,7 +455,7 @@ main {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-    display: none; /* Initially hidden */
+    display: none;
     justify-content: center;
     align-items: center;
     z-index: 2000;
@@ -406,7 +463,7 @@ main {
 }
 
 .modal:target {
-    display: flex; /* Show modal when URL hash matches ID */
+    display: flex;
 }
 
 .modal-content {
@@ -423,8 +480,9 @@ main {
 @keyframes slideUp {
     from {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(3rem);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -462,69 +520,84 @@ main {
     color: var(--text-dark);
 }
 
-/* 7. Desktop Responsiveness */
 @media (min-width: 768px) {
-    /* Header - show main links */
+
     .center_navbar {
         display: flex;
     }
 
-    /* Product Grid - medium cards on tablet */
     .products-grid {
-        /* Ensure columns are at least 220px wide on tablets/desktops */
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
-    
-    /* Product Card image size adjustment */
-     .product-card img {
+
+    .product-card img {
         height: 240px;
     }
 }
 
 @media (min-width: 1024px) {
-    /* Product Grid - 4 columns fixed */
+
     .products-grid {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
-/* Footer styles - polished 3-column layout */
 .site-footer {
     background: linear-gradient(135deg, #0f4bd8, var(--primary-color));
     color: white;
     padding: 2.25rem 0;
     margin-top: 3rem;
 }
-.site-footer .footer-inner{
-    max-width:1400px;
-    margin:0 auto;
-    padding:0 1.5rem;
-    display:flex;
-    gap:2rem;
-    align-items:flex-start;
-    justify-content:space-between;
+
+.site-footer .footer-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
-@media(max-width:900px){
-    .site-footer .footer-inner{flex-direction:column;align-items:center;text-align:center}
-    .footer-col{width:100%}
-    .newsletter-form{flex-direction:column}
-    .newsletter-form .banner-btn{width:100%}
-    .muted{margin-left:0}
+@media(max-width:900px) {
+    .site-footer .footer-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center
+    }
+
+    .footer-col {
+        width: 100%
+    }
+
+    .newsletter-form {
+        flex-direction: column
+    }
+
+    .newsletter-form .banner-btn {
+        width: 100%
+    }
+
+    .muted {
+        margin-left: 0
+    }
 }
 
-/* Product detail modal using :target (no JS) */
 .modal {
     position: fixed;
     inset: 0;
-    background: rgba(2,6,23,0.6);
+    background: rgba(2, 6, 23, 0.6);
     display: none;
     align-items: center;
     justify-content: center;
     z-index: 2000;
     padding: 1.5rem;
 }
-.modal:target { display: flex; }
+
+.modal:target {
+    display: flex;
+}
+
 .modal-content {
     background: var(--card-bg);
     border-radius: 12px;
@@ -533,21 +606,63 @@ main {
     padding: 1.25rem;
     box-shadow: var(--shadow-hover);
 }
-.modal-content .close { float: right; text-decoration:none; font-size:1.5rem; color:var(--text-dark); }
-.modal-body{display:flex;gap:1rem;align-items:flex-start}
-.modal-body img{width:220px;height:220px;object-fit:cover;border-radius:8px}
-.modal-body .details{flex:1}
-.modal-body .details .price{color:var(--primary-color);font-weight:700;font-size:1.2rem}
-.modal-body ul{margin-top:0.75rem;margin-bottom:0.75rem}
-.modal-body li{color:var(--text-light);margin-bottom:0.35rem}
 
-@media (max-width:760px){
-    .modal-body{flex-direction:column;align-items:center}
-    .modal-body img{width:80%;height:auto}
-    .modal-content{padding:1rem}
+.modal-content .close {
+    float: right;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--text-dark);
 }
 
-/* Scrolling marquee inside banner */
+.modal-body {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start
+}
+
+.modal-body img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px
+}
+
+.modal-body .details {
+    flex: 1
+}
+
+.modal-body .details .price {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.2rem
+}
+
+.modal-body ul {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem
+}
+
+.modal-body li {
+    color: var(--text-light);
+    margin-bottom: 0.35rem
+}
+
+@media (max-width:760px) {
+    .modal-body {
+        flex-direction: column;
+        align-items: center
+    }
+
+    .modal-body img {
+        width: 80%;
+        height: auto
+    }
+
+    .modal-content {
+        padding: 1rem
+    }
+}
+
 .banner-marquee {
     position: absolute;
     bottom: 0rem;
@@ -557,6 +672,7 @@ main {
     background: var(--primary-color);
     padding: 0.5rem 0;
 }
+
 .banner-marquee .marquee {
     display: inline-flex;
     gap: 3rem;
@@ -564,19 +680,25 @@ main {
     will-change: transform;
     animation: marquee 18s linear infinite;
 }
+
 .banner-marquee .marquee span {
     color: #fff;
     font-weight: 600;
     font-size: clamp(0.9rem, 1.5vw, 1.05rem);
     padding: 0 1rem;
 }
-/* Pause the marquee when user hovers (or focuses) */
+
 .banner-marquee:hover .marquee,
 .banner-marquee:focus-within .marquee {
     animation-play-state: paused;
 }
 
 @keyframes marquee {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-50%); }
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }

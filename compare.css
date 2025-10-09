@@ -1,10 +1,4 @@
-/*
- * ShopEase Product Comparison Styling
- * Styles for the compare.html page
- */
 
-/* Assuming index.css or a global style handles body, header, and primary colors. 
-   We define local variables for clarity and fallback. */
 :root {
     --primary-color: #1a73e8; 
     --secondary-color: #34a853; 
@@ -16,7 +10,6 @@
     --row-highlight: #e8f0fe; /* Light blue for primary action/header highlight */
 }
 
-/* Ensure the main content area is centered and padded */
 .compare-main {
     padding: 2rem 1.5rem;
     max-width: 1400px;

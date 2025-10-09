@@ -1,12 +1,6 @@
-/*
-    * ShopEase Cart Page Styling
-    * Styles for the cart.html page
-    */
-
-    /* --- Shared Color Variables (Maintain consistency with index.css) --- */
     :root {
-        --primary-color: #1a73e8; /* Blue */
-        --secondary-color: #34a853; /* Green */
+        --primary-color: #1a73e8;
+        --secondary-color: #34a853; 
         --text-dark: #202124;
         --text-light: #5f6368;
         --background-light: #f8f9fa;
@@ -43,16 +37,14 @@
         margin: 3rem 0;
     }
 
-    /* --- 1. Cart Container Layout (Desktop: 2 Columns) --- */
     .cart-container {
         display: flex;
-        flex-direction: column; /* Stack on mobile */
+        flex-direction: column; 
         gap: 2rem;
     }
 
-    /* --- A. Cart Items List --- */
     .cart-items-list {
-        flex: 2; /* Takes more space on desktop */
+        flex: 2; 
     }
 
     .cart-item {
@@ -104,7 +96,7 @@
         font-weight: 700;
         font-size: 1.1rem;
         color: var(--text-dark);
-        min-width: 60px; /* Aligns prices */
+        min-width: 60px;
         text-align: right;
     }
 
@@ -121,7 +113,6 @@
         color: #990000;
     }
 
-    /* --- B. Cart Summary --- */
     .cart-summary {
         flex: 1;
         background-color: var(--card-bg);
@@ -129,7 +120,7 @@
         padding: 1.5rem;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border: 1px solid var(--border-color);
-        height: fit-content; /* Important for alignment */
+        height: fit-content;
     }
 
     .cart-summary h3 {
@@ -186,10 +177,9 @@
         transform: translateY(-1px);
     }
 
-    /* --- 2. Checkout Section (Payment) --- */
     .checkout-section {
         padding-top: 2rem;
-        margin-top: -2rem; /* Compensate for header height when scrolling to target */
+        margin-top: -2rem; 
         padding-bottom: 2rem;
     }
 
@@ -226,7 +216,6 @@
         padding: 1rem;
     }
 
-    /* Style for when the radio button is checked */
     .payment-card input[type="radio"]:checked + .card-content {
         color: var(--primary-color);
     }
@@ -239,8 +228,6 @@
         border-color: var(--primary-color);
         box-shadow: 0 2px 5px rgba(26, 115, 232, 0.2);
     }
-
-    /* Hide the default radio button */
     .payment-card input[type="radio"] {
         position: absolute;
         opacity: 0;
@@ -262,7 +249,7 @@
         color: var(--text-light);
     }
 
-    /* Highlight icon color when selected */
+
     .payment-card input[type="radio"]:checked + .card-content i {
         color: var(--primary-color);
     }
@@ -296,73 +283,68 @@
         transform: translateY(-1px);
     }
 
-    /* --- 3. Payment Success Message (CSS :target trick) --- */
     .payment-success-section {
-        /* HIDDEN STATE: Fixed, invisible, and non-interactive, covering the whole screen */
         position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
-        z-index: 1000; /* Must be high to cover the header */
+        z-index: 1000; 
         
-        /* Centering the content */
         display: flex;
         justify-content: center;
         align-items: center;
         
-        /* Hiding properties */
         opacity: 0;
         visibility: hidden;
-        pointer-events: none; /* Disable clicking on elements underneath when hidden */
-        background-color: rgba(255, 255, 255, 0.0); /* Transparent initially */
+        pointer-events: none; 
+        background-color: rgba(255, 255, 255, 0.0);
         
         transition: opacity 0.5s ease, visibility 0.5s ease, background-color 0.5s ease;
     }
 
-    /* REVEAL the message when the URL fragment matches its ID */
     .payment-success-section:target {
         opacity: 1;
         visibility: visible;
-        pointer-events: auto; /* Enable interaction with the success box when shown */
-        background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent overlay to dim content below */
+        pointer-events: auto; 
+        background-color: rgba(255, 255, 255, 0.95);
     }
 
     .success-message-box {
-        background-color: #e8f5e9; /* Very light green background */
+        background-color: #e8f5e9;
         border: 3px solid var(--secondary-color);
         border-radius: 12px;
-        padding: 4rem 3rem; /* Increased padding */
+        padding: 4rem 3rem; 
         text-align: center;
-        width: 90%; /* Responsive width */
-        max-width: 50vw; /* Adjusted max-width to 50% of the viewport width */
-        min-height: 50vh; /* Set minimum height to 50% of viewport height */
-        display: flex; /* Added for centering content vertically */
-        flex-direction: column; /* Added for centering content vertically */
-        justify-content: center; /* Added for centering content vertically */
+        width: 90%;
+        max-width: 50vw; 
+        min-height: 50vh;
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; 
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
     .success-icon {
-        font-size: 5rem; /* Increased icon size */
+        font-size: 5rem; 
         color: var(--secondary-color);
         margin-bottom: 1rem;
     }
 
     .success-message-box h2 {
-        font-size: 2.5rem; /* Increased heading size */
+        font-size: 2.5rem;
         color: var(--secondary-color);
         margin-bottom: 1rem;
     }
 
     .success-message-box p {
-        font-size: 1.25rem; /* Increased paragraph text size */
+        font-size: 1.25rem; 
         color: var(--text-dark);
         margin-bottom: 0.5rem;
     }
 
     .final-greeting {
-        font-size: 1.75rem; /* Increased greeting text size */
+        font-size: 1.75rem;
         font-weight: 700;
         color: var(--primary-color);
         margin-top: 1.5rem;
@@ -383,10 +365,7 @@
         background-color: #125cd7;
     }
 
-
-    /* --- Mobile Responsiveness --- */
     @media (min-width: 768px) {
-        /* Desktop/Tablet Layout: Two columns for cart view */
         .cart-container {
             flex-direction: row;
         }
