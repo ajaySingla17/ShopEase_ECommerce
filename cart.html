@@ -28,29 +28,18 @@
 
 
       <div class="center_navbar">
+      </div>
 
+
+
+      <nav class="right_navbar">
         <nav class="button_area">
           <a href="index.html"> <i class="fa-solid fa-shirt"></i> Shop</a>
           <a href="comparision.html"> <i class="fa-solid fa-exchange-alt"></i> Compare</a>
           <a href="cart.html"> <i class="fa-solid fa-shopping-cart"></i> Cart</a>
           <a href="inquiry.html"> <i class="fa-solid fa-question-circle"></i> Inquiry</a>
         </nav>
-      </div>
-
-
-
-      <nav class="right_navbar">
-        <button class="icon-btn" title="Search">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-        <div class="InputContainer">
-          <input placeholder="Search.." id="input" class="input" name="text" type="text">
-
-        </div>
-
-        <button class="icon_btn" title="Login">
-          <i class="fa-regular fa-user"></i>
-        </button>
+      </nav>
       </nav>
     </nav>
   </header>
@@ -63,67 +52,28 @@
             
             <!-- A. Cart Items List -->
             <div class="cart-items-list">
-                <!-- Mock Cart Item 1: T-Shirt -->
-                <article class="cart-item">
-                    <img src="products/white_tshirt.webp" alt="Classic White T-Shirt">
-                    <div class="item-details">
-                        <h4>Classic White T-Shirt (Size L)</h4>
-                        <p class="item-meta">Category: T-Shirts | Item ID: #1001</p>
-                    </div>
-                    <div class="item-actions">
-                        <label>Qty: <span>1</span></label>
-                        <p class="item-price">₹599</p>
-                        <button class="remove-btn" title="Remove Item"><i class="fa-solid fa-trash-can"></i></button>
-                    </div>
-                </article>
-
-                <!-- Mock Cart Item 2: Running Shoes -->
-                <article class="cart-item">
-                    <img src="products/running.jpeg" alt="Running Shoes">
-                    <div class="item-details">
-                        <h4>UltraBoost Running Shoes (Size 10)</h4>
-                        <p class="item-meta">Category: Shoes | Item ID: #2005</p>
-                    </div>
-                    <div class="item-actions">
-                        <label>Qty: <span>2</span></label>
-                        <p class="item-price">₹1999</p>
-                        <button class="remove-btn" title="Remove Item"><i class="fa-solid fa-trash-can"></i></button>
-                    </div>
-                </article>
-                
-                <!-- Mock Cart Item 3: Denim Jeans -->
-                 <article class="cart-item">
-                    <img src="products/slim.jpeg" alt="Slim Fit Jeans">
-                    <div class="item-details">
-                        <h4>Slim Fit Indigo Jeans (Size 32)</h4>
-                        <p class="item-meta">Category: Denim | Item ID: #4010</p>
-                    </div>
-                    <div class="item-actions">
-                        <label>Qty: <span>1</span></label>
-                        <p class="item-price">₹569</p>
-                        <button class="remove-btn" title="Remove Item"><i class="fa-solid fa-trash-can"></i></button>
-                    </div>
-                </article>
+                <div id="cart-items"></div>
+                <p id="empty-cart" style="display:none;">Your cart is empty.</p>
             </div>
 
             <!-- B. Cart Summary -->
             <div class="cart-summary">
                 <h3>Order Summary</h3>
                 <div class="summary-line">
-                    <span>Subtotal (4 Items)</span>
-                    <span class="value">₹3980</span>
+                    <span>Subtotal (<span id="item-count">0</span> Items)</span>
+                    <span class="value" id="subtotal">₹0</span>
                 </div>
                 <div class="summary-line">
                     <span>Shipping Estimate</span>
-                    <span class="value">₹100</span>
+                    <span class="value" id="shipping">₹100</span>
                 </div>
                 <div class="summary-line discount">
                     <span>Discount</span>
-                    <span class="value text-green">-₹100</span>
+                    <span class="value text-green" id="discount">-₹0</span>
                 </div>
                 <div class="summary-line total">
                     <span>Order Total</span>
-                    <span class="value total-value">₹3980</span>
+                    <span class="value total-value" id="total">₹0</span>
                 </div>
 
                 <!-- Checkout button links to the payment section below -->
@@ -136,7 +86,7 @@
 
 
         <!-- 2. Checkout Section -->
-        <section class="checkout-section" id="checkout-section">
+        <section class="checkout-section" id="checkout-section" style="display: none;">
             <h2 class="section-title">2. Select Payment Method</h2>
             
             <form class="payment-form">
@@ -188,8 +138,8 @@
                 
                 <!-- Pay button links to the success message -->
                 <!-- Note: The form submission is simulated by the anchor link, not actual processing -->
-                <a href="#payment-success" class="pay-btn" aria-label="Pay now">
-                     Pay ₹3980 Now
+                <a href="#payment-success" class="pay-btn" id="pay-btn" aria-label="Pay now">
+                     Pay ₹0 Now
                 </a>
             </form>
         </section>
@@ -207,7 +157,8 @@
         </div>
 
     </main>
-    <script src="cart.js"></script>
+    <script src="js/product.js"></script>
+    <script src="js/cart.js"></script>
 
 </body>
 </html>
