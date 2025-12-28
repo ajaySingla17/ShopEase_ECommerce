@@ -1,4 +1,4 @@
-const products = [
+export const products = [
   { id: 1, name: "Classic White T-Shirt", price: 599, category: "tshirts", image: "products/white_tshirt.webp" },
   { id: 2, name: "Graphic T-Shirt", price: 899, category: "tshirts", image: "products/graphic.webp" },
   { id: 3, name: "Striped T-Shirt", price: 699, category: "tshirts", image: "products/striped.jpeg" },
